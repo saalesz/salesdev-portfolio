@@ -1,0 +1,109 @@
+.BgTittle {
+  position: absolute;
+  width: auto;
+  height: 91px;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+
+  font-family: var(--font-plus);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 91px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    180deg,
+    rgba(39, 39, 39, 0.8) 0%,
+    rgba(18, 18, 18, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  filter: blur(2px);
+}
+
+.Tittle {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  left: calc(50% - (150px) / 2);
+  top: 141px;
+
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: var(--Branco);
+}
+
+.BgTittle2 {
+  position: absolute;
+  width: auto;
+  height: 91px;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+
+  font-family: var(--font-plus);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 91px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    180deg,
+    rgba(175, 175, 175, 0.8) 0%,
+    rgba(240, 237, 230, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  filter: blur(2px);
+}
+
+.Tittle2 {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  left: calc(50% - (150px) / 2);
+  top: 141px;
+
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: var(--Preto);
+}
+
+.Svg {
+  position: absolute;
+  width: 400px;
+  height: 35px;
+  left: calc(50% - 400px / 2);
+  top: 161px;
+}

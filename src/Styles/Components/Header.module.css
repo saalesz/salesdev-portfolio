@@ -1,0 +1,403 @@
+.header {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 32px;
+  gap: 255px;
+
+  position: fixed;
+  width: calc(100% - 16px);
+  height: 72px;
+  left: calc(50% - (100% - 16px) / 2);
+  top: 30px;
+
+  background: rgba(18, 18, 18, 0.2);
+  border: 1px solid rgba(175, 175, 175, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 64px;
+
+  z-index: 9;
+}
+
+.Logo {
+  display: none;
+}
+
+.Icon {
+  display: flex;
+
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  z-index: 9;
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  top: -3px;
+  right: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 480px;
+
+  background: var(--Branco);
+  border-radius: 36px;
+
+  overflow: hidden;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+
+  position: absolute;
+  width: 156px;
+  height: 154px;
+  left: calc(50% - 156px / 2);
+  top: 100px;
+}
+
+.nav li {
+  position: relative;
+  width: auto;
+  height: 32px;
+  font-family: var(--font-poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--Preto);
+
+  transition: color 0.3s ease;
+}
+
+.nav li::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--Azul-Claro);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav li:hover::after {
+  width: 100%;
+}
+
+.BtnContatos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  width: 225px;
+  height: 49px;
+  left: calc(50% - 225px / 2);
+  top: 410px;
+
+  background: linear-gradient(95deg, #007aff 0%, #003fff 100%);
+  border-radius: 24px;
+
+  font-family: var(--font-plus);
+  font-size: 20px;
+  line-height: 25px;
+
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: var(--Branco);
+
+  transition: all 0.3s ease;
+}
+
+.Redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 244px;
+  height: auto;
+  left: calc(50% - 244px / 2);
+  top: 275px;
+
+  & h1 {
+    width: 244px;
+    height: 18px;
+
+    font-family: var(--font-plus);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* idêntico à altura da caixa */
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--Cinza-Claro);
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  & .RedesIcon {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center !important;
+    padding: 0px;
+    gap: 44px;
+
+    width: 100%;
+    height: 48px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    & .IconRedes {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 9.75px;
+      gap: 9.75px;
+
+      width: 48px;
+      height: 48px;
+
+      background: radial-gradient(
+        71.4% 51.16% at 50% 50%,
+        #007aff 0%,
+        #003fff 100%
+      );
+      box-shadow: 0px 22.2857px 9.28571px rgba(4, 99, 223, 0.01),
+        0px 13px 7.42857px rgba(4, 99, 223, 0.05),
+        0px 5.57143px 5.57143px rgba(4, 99, 223, 0.09),
+        0px 1.85714px 3.71429px rgba(4, 99, 223, 0.1);
+      border-radius: 13px;
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+
+      & img {
+        width: auto;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.navOpen {
+  display: flex;
+}
+
+/* Botão do menu hambúrguer */
+.hamburger {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: 25px;
+  background: none;
+  border: none;
+}
+
+.menuIcon {
+  display: flex;
+  width: auto;
+  height: 25px;
+}
+
+.closeIcon {
+  display: flex;
+  position: relative;
+  height: 27px;
+  background: none;
+  border: none;
+}
+
+/* Responsivo
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    gap: 520px;
+
+    width: calc(100% - 180px);
+    left: calc(50% - (100% - 180px) / 2);
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+@media (min-width: 1024px) {
+  .header {
+    height: 80px;
+    width: calc(100% - 210px);
+    left: calc(50% - (100% - 210px) / 2);
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 40px;
+    gap: 120px; 
+  }
+
+  /* Logo: Remove o absolute para ele respeitar o Flex do Header */
+  .Logo {
+    display: block;
+    position: static; 
+    height: 40px;
+    width: auto;
+  }
+
+  /* Container que envolve UL e Botão */
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 180px;
+    
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  /* Lista de links: Remove o absolute e o fundo vermelho */
+  .nav ul {
+    position: static; /* Importante: volta para o fluxo normal */
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: auto;
+    height: auto;
+    background-color: transparent; /* Removido o vermelho */
+  }
+
+  .nav li {
+    font-size: 18px;
+    line-height: normal;
+    color: var(--Branco);
+  }
+
+  /* Botão: Remove o position absolute e o left fixo */
+  .BtnContatos {
+    position: static; /* Faz o botão ficar ao lado do UL através do flex do .nav */
+    width: 180px;
+    height: 49px;
+    margin: 0;
+    
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 24px;
+  }
+
+  /* Oculta elementos desnecessários no desktop */
+  .Icon,
+  .hamburger,
+  .menuIcon,
+  .closeIcon,
+  .Redes {
+    display: none !important;
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .header {
+    height: 80px;
+    width: calc(100% - 745px);
+    left: calc(50% - (100% - 745px) / 2);
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 40px;
+    gap: 120px; 
+  }
+
+  /* Logo: Remove o absolute para ele respeitar o Flex do Header */
+  .Logo {
+    display: block;
+    position: static; 
+    height: 32px;
+    width: auto;
+  }
+
+  /* Container que envolve UL e Botão */
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 180px;
+    
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  /* Lista de links: Remove o absolute e o fundo vermelho */
+  .nav ul {
+    position: static; /* Importante: volta para o fluxo normal */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    height: auto;
+    background-color: transparent; /* Removido o vermelho */
+  }
+
+  .nav li {
+    font-size: 20px;
+    line-height: normal;
+    color: var(--Branco);
+  }
+
+  /* Botão: Remove o position absolute e o left fixo */
+  .BtnContatos {
+    position: static; /* Faz o botão ficar ao lado do UL através do flex do .nav */
+    width: 180px;
+    height: 49px;
+    margin: 0;
+    
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 24px;
+  }
+
+  /* Oculta elementos desnecessários no desktop */
+  .Icon,
+  .hamburger,
+  .menuIcon,
+  .closeIcon,
+  .Redes {
+    display: none !important;
+  }
+}

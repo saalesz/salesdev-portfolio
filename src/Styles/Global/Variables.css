@@ -1,0 +1,34 @@
+/* <----- VARIAVEIS -----> */
+:root {
+  /* CORES */
+  --Azul-Claro: #007aff;
+  --Azul-Escuro: #003fff;
+  --Branco: #f0ede6;
+  --Cinza-Claro: #afafaf;
+  --Cinza-Escuro: #121212;
+  --Preto: #050506;
+  
+  /* FONTES */
+  --font-poppins: "Poppins", sans-serif;
+  --font-plus: "Plus Jakarta Sans", sans-serif;
+
+  /* TAMMANHO DE FONTE */
+}
+
+/* SCROLLBAR */
+
+/* Largura */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Fundo */
+::-webkit-scrollbar-track {
+  background-color: var(--Preto);
+}
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+  background: var(--Azul);
+  border-radius: 25px;
+}

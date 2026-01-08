@@ -1,0 +1,275 @@
+.Home {
+  position: relative;
+  width: 100%;
+  height: 824px;
+
+  background: var(--Preto);
+
+  overflow: hidden;
+
+ .introBadge {
+    position: absolute;
+    width: 289px;
+    height: 24px;
+    left: 16px;
+    top: 145px;
+
+    font-family: var(--font-poppins);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--Cinza-Claro);
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 37px;
+
+  position: absolute;
+  width: calc(100% - 16px);
+  height: auto;
+  left: calc(50% - (100% - 16px) / 2);
+  top: 193px;
+
+  & .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 100%;
+    height: auto;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+    & h1 {
+      width: 100%;
+      height: auto;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 47px;
+
+      leading-trim: both;
+      text-edge: cap;
+      display: block;
+      align-items: center;
+      text-transform: uppercase;
+
+      color: var(--Branco);
+
+      flex: none;
+      order: 0;
+      align-self: stretch;
+      flex-grow: 0;
+
+      & span {
+        color: var(--Azul-Claro);
+      }
+    }
+
+    & h2 {
+      width: 100%;
+      height: auto;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+
+      color: var(--Cinza-Claro);
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+
+  & .btn {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 28px 12px 12px;
+    gap: 10px;
+
+    width: auto;
+    height: 53.66px;
+    overflow: hidden;
+
+    background: linear-gradient(180deg, #121212 0%, #101010 100%);
+    border-radius: 32px;
+    border: 1.5px solid rgba(240, 237, 230, 0.062);
+    cursor: pointer;
+
+    font-family: var(--font-plus);
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--Branco);
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+
+    & .iconBtn {
+      order: -1;
+
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(
+        71.4% 51.16% at 50% 50%,
+        #007aff 0%,
+        #003fff 100%
+      );
+      border: 0.5px solid rgba(240, 237, 230, 0.2);
+      box-shadow: 0px 0px 4px rgba(129, 174, 223, 0.01),
+        0px 0px 4px rgba(129, 174, 223, 0.03),
+        0px 0px 3px rgba(129, 174, 223, 0.04),
+        0px 0px 2px rgba(129, 174, 223, 0.05);
+
+      border-radius: 50%;
+
+      & .Arrow {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &:hover .Arrow {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+/* Responsivo
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Home {
+    height: 824px;
+
+   .introBadge {
+      left: 72px;
+      top: 145px;
+    }
+  }
+
+  .textContainer {
+    gap: 37px;
+
+    position: absolute;
+    width: calc(100% - 320px);
+    height: auto;
+    left: 72px;
+    top: 193px;
+
+    & .text {
+      gap: 24px;
+
+      & h1 {
+        font-size: 42px;
+        line-height: 53px;
+      }
+
+      & h2 {
+        width: 80%;
+      }
+    }
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+@media (min-width: 1280px) {
+  .Home {
+    height: 784px;
+
+   .introBadge {
+      left: 95px;
+      top: 145px;
+    }
+  }
+
+  .textContainer {
+    gap: 37px;
+
+    position: absolute;
+    width: calc(100% - 620px);
+    height: auto;
+    left: 95px;
+    top: 193px;
+
+    & .text {
+      gap: 24px;
+
+      & h1 {
+        font-size: 52px;
+        line-height: 63px;
+      }
+
+      & h2 {
+        width: 80%;
+      }
+    }
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .Home {
+    height: 956px;
+
+   .introBadge {
+      left: 105px;
+      top: 220px;
+    }
+  }
+
+  .textContainer {
+    gap: 37px;
+
+    position: absolute;
+    width: calc(100% - 924px);
+    height: auto;
+    left: 105px;
+    top: 280px;
+
+    & .text {
+      gap: 24px;
+
+      & h1 {
+        font-size: 76px;
+        line-height: 90px;
+      }
+
+      & h2 {
+        width: 70%;
+      }
+    }
+  }
+}

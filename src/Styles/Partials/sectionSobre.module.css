@@ -1,0 +1,264 @@
+.Sobre {
+  position: relative;
+  width: 100%;
+  height: 1105px;
+
+  background: var(--Branco);
+
+  overflow: hidden;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 35px;
+
+  position: absolute;
+  width: calc(100% - 16px);
+  height: auto;
+  left: calc(50% - (100% - 16px) / 2);
+  top: 236px;
+
+  & .Text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 100%;
+    height: auto;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    & h1 {
+      width: 100%;
+      height: auto;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 47px;
+
+      align-items: center;
+      text-transform: uppercase;
+
+      color: var(--Preto);
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+
+      & span {
+        color: var(--Azul-Claro);
+      }
+    }
+
+    & h2 {
+      width: 100%;
+      height: auto;
+
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+
+      color: var(--Cinza-Escuro);
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  }
+
+  & .ButtonCV {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 28px 12px 12px;
+    gap: 10px;
+    position: relative;
+
+    width: 342.75px;
+    height: 54.75px;
+
+    background: linear-gradient(180deg, #007aff 0%, #003fff 100.64%);
+    box-shadow: 0px 32px 13px rgba(1, 69, 255, 0.02),
+      0px 18px 11px rgba(1, 69, 255, 0.06), 0px 8px 8px rgba(1, 69, 255, 0.1),
+      0px 2px 4px rgba(1, 69, 255, 0.12);
+    border-radius: 32px;
+    border: none;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    font-family: var(--font-plus);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--Branco);
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+
+    & .IconCV {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 9.3739px;
+      gap: 9.37px;
+
+      width: 30.75px;
+      height: 30.75px;
+
+      background: radial-gradient(
+        71.4% 51.16% at 50% 50%,
+        #f0ede6 0%,
+        #ddd7c9 100%
+      );
+      border: 0.5px solid rgba(5, 5, 6, 0.2);
+      border-radius: 100%;
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+
+      & img {
+        width: auto;
+        height: 12px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+.ButtonCV::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+}
+
+.ButtonCV:hover::before {
+  animation: shine 1.5s infinite;
+  opacity: 1;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+
+  100% {
+    left: 125%;
+  }
+}
+
+/* Responsivo
+
+/* TABLET (768px a 1023px) */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Sobre {
+    height: 1005px;
+  }
+
+  .Container {
+    gap: 35px;
+
+    width: calc(100% - 320px);
+    left: 72px;
+    top: 252px;
+
+    & .Text {
+      gap: 20px;
+
+      & h1 {
+        font-size: 42px;
+        line-height: 53px;
+      }
+    }
+  }
+}
+
+/* DESKTOP / NOTEBOOK (≥1024px) */
+
+@media (min-width: 1280px) {
+  .Sobre {
+    height: 955px;
+  }
+
+  .Container {
+    gap: 35px;
+
+    width: calc(100% - 660px);
+    left: 95px;
+    top: 272px;
+
+    & .Text {
+      gap: 20px;
+
+      & h1 {
+        font-size: 52px;
+        line-height: 63px;
+      }
+    }
+  }
+}
+
+/* TELAS GRANDES (≥1700px) */
+
+@media (min-width: 1700px) {
+  .Sobre {
+    height: 955px;
+  }
+
+  .Container {
+    gap: 35px;
+
+    width: calc(100% - 1100px);
+    left: 105px;
+    top: 272px;
+
+    & .Text {
+      gap: 20px;
+
+      & h1 {
+        font-size: 76px;
+        line-height: 90px;
+      }
+    }
+  }
+}

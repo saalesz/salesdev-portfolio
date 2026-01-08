@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01",
+    "title": "HTML5 & CSS3",
+    "description": "Domínio total na estruturação semântica de conteúdo (HTML) e estilização responsiva e moderna de interfaces (CSS3)."
+  },
+  {
+    "id": "02",
+    "title": "JavaScript",
+    "description": "Sólido conhecimento na linguagem, capaz de manipular o DOM e criar funcionalidades interativas e assíncronas no Front-End."
+  },
+  {
+    "id": "03",
+    "title": "ReactJS / Native",
+    "description": "Experiência na criação de interfaces escaláveis e dinâmicas utilizando React para web e React Native para aplicações mobile."
+  },
+  {
+    "id": "04",
+    "title": "Figma & Prototipagem",
+    "description": "Proficiência na criação de design systems, prototipagem de alta fidelidade e entrega de especificações técnicas para desenvolvimento."
+  },
+  {
+    "id": "05",
+    "title": "MySQL",
+    "description": "Conhecimentos básicos em modelagem de banco de dados relacional (SQL) e operações CRUD para gerenciamento de dados."
+  },
+  {
+    "id": "06",
+    "title": "Linguagem C & C#",
+    "description": "Conhecimentos conceituais e básicos em programação de baixo nível (C) e no ambiente .NET (C#)."
+  }
+]
