@@ -1,7 +1,7 @@
 .Projetos {
   position: relative;
   width: 100%;
-  height: 2600px;
+  height: 1800px;
 
   background: var(--Preto);
 
@@ -29,7 +29,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .Projetos {
-    height: 1700px;
+    height: 1350px;
   }
 
   .ProjectGrid {
@@ -44,7 +44,7 @@
 /* DESKTOP / NOTEBOOK (≥1024px) */
 @media (min-width: 1280px) {
   .Projetos {
-    height: 1160px;
+    height: 800px;
   }
 
   .ProjectGrid {
@@ -67,7 +67,7 @@
 
 @media (min-width: 1700px) {
   .Projetos {
-    height: 1380px;
+    height: 980px;
   }
 
   .ProjectGrid {

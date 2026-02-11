@@ -271,6 +271,8 @@
     position: static; 
     height: 40px;
     width: auto;
+
+    cursor: pointer;
   }
 
   /* Container que envolve UL e Botão */
@@ -347,6 +349,8 @@
     position: static; 
     height: 32px;
     width: auto;
+
+    cursor: pointer;
   }
 
   /* Container que envolve UL e Botão */

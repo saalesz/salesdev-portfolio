@@ -1,11 +1,15 @@
 /* <--- FUNCTIONS REACT ---> */
-import React from "react";
+import { useEffect } from "react";
 
 /* <-----  CSS -----> */
 import styles from "../Styles/Components/CardProjects.module.css";
 
 /* <-----  ASSETS - ICON FIXO -----> */
 import Arrow from "../Assets/Icons/svgs/Vector.svg";
+
+/* <---- AOS ANIMATIONS ----> */
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Adicionamos 'bgColor' às props
 function CardProjects({
@@ -17,8 +21,15 @@ function CardProjects({
   template,
   bgColor,
 }) {
+  /* Chama a animação com aos */
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+    });
+  }, []);
+
   return (
-    <div className={styles.Card}>
+    <div className={styles.Card} data-aos="fade-up">
       <div className={styles.Container}>
         <img className={styles.logo} src={logo} alt={`Logo ${title}`} />
 

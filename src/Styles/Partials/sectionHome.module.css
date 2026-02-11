@@ -9,9 +9,9 @@
 
  .introBadge {
     position: absolute;
-    width: 289px;
+    width: auto;
     height: 24px;
-    left: 16px;
+    left: 8px;
     top: 145px;
 
     font-family: var(--font-poppins);
@@ -71,6 +71,7 @@
       display: block;
       align-items: center;
       text-transform: uppercase;
+      flex-wrap: wrap; 
 
       color: var(--Branco);
 
@@ -79,7 +80,7 @@
       align-self: stretch;
       flex-grow: 0;
 
-      & span {
+      & .spanColor {
         color: var(--Azul-Claro);
       }
     }
@@ -93,7 +94,7 @@
       font-weight: 500;
       font-size: 20px;
       line-height: 30px;
-      display: flex;
+      display: block;
       align-items: center;
 
       color: var(--Cinza-Claro);

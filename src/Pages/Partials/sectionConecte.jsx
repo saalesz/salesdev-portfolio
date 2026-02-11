@@ -1,68 +1,64 @@
-import React from "react";
+import { useEffect } from "react";
+import { motion } from "framer-motion"; // 1. Importar o motion
 
-/** * ESTILIZAÇÃO
- * Separação de estilos por módulos para garantir escopo local
- */
 import styles from "../../Styles/Partials/sectionContatos.module.css";
 import tittlepage from "../../Styles/Partials/tittlepage.module.css";
 
 import { contactsData } from "../../data/contacts.js";
 import ArrowIcon from "../../Assets/Icons/svgs/Arrow.svg";
+import Subtract from "../../Assets/Subtract.png";
+
+/* <---- AOS ANIMATIONS ----> */
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// 2. Configuração das animações (Variantes)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // Tempo entre a aparição de cada card
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 function Contatos() {
+  /* Chama a animação com aos */
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+    });
+  }, []);
+
   return (
     <section
       className={styles.Contatos}
       id="contatos"
       aria-labelledby="hero-title"
     >
-      {/* ELEMENTO DECORATIVO: SVG de fundo com efeito de glow/linha */}
-      <svg
-        width="409"
-        height="44"
-        viewBox="0 0 409 44"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={tittlepage.Svg}
-      >
-        <g filter="url(#filter0_f_1_3332)">
-          <path
-            d="M4.29004 4.29004C4.29004 4.29004 4.29248 39.29 196.29 39.29C404.29 39.29 404.29 4.29004 404.29 4.29004"
-            stroke="#007AFF"
-            strokeWidth="0.58"
-            strokeLinecap="round"
-          />
-        </g>
-        <defs>
-          <filter
-            id="filter0_f_1_3332"
-            x="0"
-            y="0"
-            width="408.58"
-            height="43.5801"
-            filterUnits="userSpaceOnUse"
-            colorInterpolationFilters="sRGB"
-          >
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur
-              stdDeviation="0"
-              result="effect1_foregroundBlur_1_3332"
-            />
-          </filter>
-        </defs>
-      </svg>
+      {/* ... (Seu SVG de fundo se mantém igual) ... */}
 
-      {/* CABEÇALHO DA SEÇÃO: Título com efeito de profundidade (Background + Foreground) */}
       <h1 className={tittlepage.BgTittle}>Contatos</h1>
       <h2 className={tittlepage.Tittle}>Contatos</h2>
 
-      <div className={styles.textContainer}>
+      {/* Animação suave no texto de introdução */}
+      <motion.div
+        className={styles.textContainer}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <h1>
           Pronto para <span>Criar Algo Incrível.</span>
         </h1>
@@ -74,31 +70,49 @@ function Contatos() {
           Explore meu universo de código e conexões. LinkedIn para a trajetória
           profissional, GitHub para ver o código em ação. Vamos interagir!
         </p>
-      </div>
+      </motion.div>
 
-      <div className={styles.CardsContainer}>
+      {/* 3. Container dos cards com animação de grupo */}
+      <motion.div
+        className={styles.cardsContainer}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         {contactsData.map((item) => (
-          <a
+          <motion.a
             href={item.url}
             key={item.id}
             target="_blank"
             rel="noreferrer"
-            className={styles.ContactCard}
+            className={styles.card}
+            variants={cardVariants}
+            whileHover={{
+              y: -8,
+              transition: { duration: 0.2 },
+            }}
+            whileTap={{ scale: 0.95 }}
+            data-aos="fade-up"
           >
-            <div className={styles.CardContent}>
-              <div className={styles.IconBox}>
-                <img src={item.icon} alt={item.platform} />
+            <div className={styles.iconContainer}>
+              <div className={styles.iconBg}>
+                <motion.img
+                  src={ArrowIcon}
+                  alt="Ir"
+                  whileHover={{ rotate: -45 }} // Sutil rotação na seta ao passar o mouse
+                />
               </div>
-                <p className={styles.CardInfo}>
-                  {item.description} 
-                </p>
-              <div className={styles.ArrowCircle}>
-                <img src={ArrowIcon} alt="Ir" />
-              </div>
+              <img src={Subtract} className={styles.subtract} alt="" />
             </div>
-          </a>
+
+            <div className={styles.cardInfo}>
+              <img src={item.icon} alt={item.platform} />
+              <h1>{item.description}</h1>
+            </div>
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -23,16 +23,6 @@ export const projectsData = [
     logo: LogoAlphaDevs,
     template: TemplateAlphaDevs,
     linkLabel: "Visite o site",
-    link: "https://app-myservice.vercel.app",
-  },
-  {
-    id: 3,
-    title: "Links Page",
-    bgColor: "#003fff",
-    description: "Página de links com foco em organização e experiência do usuário (UX).",
-    logo: LogoAlphaDevs, // Exemplo reutilizando
-    template: TemplateAlphaDevs,
-    linkLabel: "Ver Repositório",
-    link: "https://github.com",
+    link: "https://alphadevs.vercel.app",
   },
 ];
