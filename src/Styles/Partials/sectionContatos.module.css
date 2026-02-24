@@ -87,7 +87,7 @@
     width: 340px;
     height: 293px;
 
-    background: linear-gradient(100.41deg, #070707 0%, #101010 100%);
+    background: linear-gradient(100.41deg, #0a0a0a 0%, #101010 100%);
     border-radius: 32px 0px 32px 32px;
 
     overflow: hidden;
@@ -178,12 +178,7 @@
         font-size: 16px;
         line-height: 20px;
 
-
-        background: linear-gradient(90deg, #afafaf38 5%, #AFAFAF 50%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        color: var(--Cinza-Claro);
 
         flex: none;
         order: 1;
