@@ -31,9 +31,6 @@
   order: 0;
   flex-grow: 0;
 
-  background-color: transparent;
-  /* gambiarra */
-
   & .logo {
     width: 40px;
     height: 40px;
@@ -74,7 +71,7 @@
       flex-grow: 0;
 
       & .title {
-        width: auto;
+        width: 100%;
         height: auto;
 
         font-family: var(--font-poppins);
@@ -83,7 +80,7 @@
         font-size: 32px;
         line-height: 1.2;
 
-
+        display: block;
         align-items: center;
 
         color: var(--Branco);
@@ -104,6 +101,7 @@
         font-size: 16px;
         line-height: 1.5;
 
+        display: block;
         color: var(--Cinza-Claro);
 
         flex: none;
@@ -123,8 +121,8 @@
       padding: 4px 8px 4px 16px;
       gap: 4px;
 
-      width: auto;
-      height: 37.66px;
+      width: fit-content;
+      height: auto;
 
       border: 1px solid var(--Branco);
       background: transparent;
