@@ -30,7 +30,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-
+  
   background-color: var(--Preto);
 
   & .logo {
@@ -82,7 +82,7 @@
         font-size: 32px;
         line-height: 1.2;
 
-        display: block;
+
         align-items: center;
 
         color: var(--Branco);
@@ -103,7 +103,6 @@
         font-size: 16px;
         line-height: 1.5;
 
-        display: block;
         color: var(--Cinza-Claro);
 
         flex: none;
@@ -123,8 +122,8 @@
       padding: 4px 8px 4px 16px;
       gap: 4px;
 
-      width: fit-content;
-      height: auto;
+      width: auto;
+      height: 37.66px;
 
       border: 1px solid var(--Branco);
       background: transparent;
