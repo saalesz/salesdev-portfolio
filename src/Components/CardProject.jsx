@@ -47,9 +47,6 @@ function CardProjects({
           >
             <button className={styles.btn}>
               {linkLabel}
-              <div className={styles.icon}>
-                <img src={Arrow} alt="Seta" />
-              </div>
             </button>
           </a>
         </div>
