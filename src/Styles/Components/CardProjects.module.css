@@ -43,11 +43,11 @@
   }
 
   & .textContainer {
-    display: block;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 40px;
+    gap: 48px;
 
     width: 100%;
     height: auto;
@@ -129,6 +129,7 @@
       border: 1px solid var(--Branco);
       background: transparent;
       border-radius: 32px;
+      cursor: pointer;
 
       font-family: var(--font-plus);
       font-style: normal;

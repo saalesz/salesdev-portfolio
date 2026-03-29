@@ -4,9 +4,6 @@ import { useEffect } from "react";
 /* <-----  CSS -----> */
 import styles from "../Styles/Components/CardProjects.module.css";
 
-/* <-----  ASSETS - ICON FIXO -----> */
-import Arrow from "../Assets/Icons/svgs/Vector.svg";
-
 /* <---- AOS ANIMATIONS ----> */
 import AOS from "aos";
 import "aos/dist/aos.css";
