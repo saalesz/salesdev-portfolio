@@ -1,45 +1,74 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "../../Styles/Partials/sectionHome.module.css";
 import Header from "../../Components/Header";
 
-function Home() {
-  const handleLearnMore = () => {
-    const aboutSection = document.getElementById("about");
-    aboutSection?.scrollIntoView({ behavior: "smooth" });
-  };
+import Arrow from "../../Assets/Icons/svgs/Arrow.svg";
 
-  // Variantes para o "surgimento discreto"
+// 1. Alterado para o abecedário completo em maiúsculas
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+function Home() {
+  const targetWord = "INTERFACE";
+  const [displayText, setDisplayText] = useState(targetWord);
+
+  useEffect(() => {
+    let iteration = 0;
+    let interval = null;
+
+    const timeout = setTimeout(() => {
+      interval = setInterval(() => {
+        setDisplayText((prev) =>
+          targetWord
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return targetWord[index]; // Fixa a letra correta
+              }
+              // 2. Sorteia apenas letras do abecedário para o efeito
+              return alphabet[Math.floor(Math.random() * alphabet.length)];
+            })
+            .join("")
+        );
+
+        if (iteration >= targetWord.length) {
+          clearInterval(interval);
+        }
+
+        iteration += 1 / 3; // Mantém a velocidade da transição
+      }, 30); // Velocidade da troca de letras (ms)
+    }, 400); 
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  // Variantes do Framer Motion
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3
-      },
+      transition: { staggerChildren: 0.15, delayChildren: 0.1 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 15, filter: "blur(4px)" },
+    hidden: { opacity: 0, y: 25 },
     visible: {
       opacity: 1,
       y: 0,
-      filter: "blur(0px)",
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+      transition: { type: "spring", stiffness: 100, damping: 15 },
     },
   };
 
-  // Texto dividido para animação
-  const fraseH1 = "Construindo Interfaces Intuitivas, Responsivas e Acessíveis.";
-  // Palavras que devem herdar a cor do span (Azul-Claro)
-  const destaques = ["Intuitivas,", "Responsivas", "Acessíveis."];
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+  const blurVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 0.6, 
+      scale: 1, 
+      transition: { duration: 1.2, ease: "easeOut" } 
     }
   };
 
@@ -47,64 +76,37 @@ function Home() {
     <>
       <Header />
       <section className={styles.Home} id="home" aria-labelledby="hero-title">
-        <motion.header
-          className={styles.introBadge}
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <motion.div 
+          className={styles.HomeContent}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <p>Desenvolvedor Front-end & UI/UX</p>
-        </motion.header>
-
-        <div className={styles.textContainer}>
-          <article className={styles.text}>
-            <motion.h1
-              id="hero-title"
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {fraseH1.split(" ").map((word, i) => (
-                <motion.span
-                  key={i}
-                  variants={itemVariants}
-                  // Se a palavra for um destaque, ela ganha a cor do CSS de span
-                  className={destaques.includes(word) ? styles.spanColor : ""}
-                  style={{ display: "inline-block", marginRight: "0.25em" }}
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </motion.h1>
-
-            <motion.h2
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.5, duration: 1 }}
-            >
-              Olá, sou Emerson Sales! Desenvolvedor Front-end e Designer UI/UX,
-              especializado em criar soluções web que colocam o usuário no centro do projeto.
-            </motion.h2>
-          </article>
-
-          <motion.button
-            className={styles.btn}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 2, duration: 0.5 }}
-            onClick={() => {
-              handleLearnMore();       
-              scrollToSection('sobre'); 
-            }}
-          >
-            Saiba sobre mim
-            <div className={styles.iconBtn}>
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className={styles.Arrow}>
-                <path d="M0.789685 6.24445L11.395 6.24458M11.395 6.24458L6.18848 0.789978M11.395 6.24458L6.18848 11.699" stroke="currentColor" strokeWidth="1.58" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+          <motion.p variants={itemVariants}>
+            - UI/UX DESIGNER & FRONT-END DEVELOPER
+          </motion.p>
+          
+          <div className={styles.HomeContentText}>
+            <div className={styles.HomeContentTextTitle}>
+              <motion.h1 variants={itemVariants} id="hero-title">
+                DESIGN DE <span className={styles.scrambleWord}>{displayText}</span>, ENGENHARIA <span>FRONT-END.</span>
+              </motion.h1>
+              
+              <motion.h2 variants={itemVariants}>
+                Olá, sou Emerson Sales. Transformo ideias complexas em aplicações web modernas, acessíveis e de alta performance, unindo design focado na experiência do usuário e código limpo.
+              </motion.h2>
             </div>
-          </motion.button>
-        </div>
+            
+            <motion.button 
+              className={styles.ViewProjects}
+              variants={itemVariants}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Ver projetos <img src={Arrow} alt="" />
+            </motion.button>
+          </div>
+        </motion.div>
       </section>
     </>
   );

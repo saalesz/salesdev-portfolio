@@ -1,18 +1,31 @@
-/* <----- VARIAVEIS -----> */
 :root {
-  /* CORES */
-  --Azul-Claro: #007aff;
-  --Azul-Escuro: #003fff;
-  --Branco: #f0ede6;
-  --Cinza-Claro: #afafaf;
-  --Cinza-Escuro: #121212;
-  --Preto: #050506;
-  
-  /* FONTES */
+  /* COLORS (Paleta SalesDev ) */
+  --Color-Primary: #A855F7;
+  --Color-White: #FEFFF9;
+  --Color-Light-Gray: #D5D5D5;
+  --Color-Dark-Gray: #111111;
+  --Color-Gray: #585858;
+  --Color-Dark: #0D0D0D;
+  --Color-Bg-Dark: #0A0A0A;
+
+  /* FONTS (Famílias) */
   --font-poppins: "Poppins", sans-serif;
   --font-plus: "Plus Jakarta Sans", sans-serif;
+  --font-bebas: "Bebas Neue", cursive;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-dm: "DM Serif Display", serif;
 
-  /* TAMMANHO DE FONTE */
+  /* FONT SIZES (Escala Hierárquica) */
+  --fs-xxl: 10.5rem;
+  --fs-full: 7.5rem;
+  --fs-max: 6.5rem;
+  --fs-h0: 4.5rem;
+  --fs-h1: 3.5rem;
+  --fs-h2: 3.2rem;
+  --fs-h3: 2.5rem;
+  --fs-h4: 1.5rem;
+  --fs-body: 1.125rem;
+  --fs-small: 0.875rem;
 }
 
 /* SCROLLBAR */
@@ -24,11 +37,11 @@
 
 /* Fundo */
 ::-webkit-scrollbar-track {
-  background-color: var(--Preto);
+  background-color: var(--Color-Dark-Gray)
 }
 
 /* Scroll */
 ::-webkit-scrollbar-thumb {
-  background: var(--Azul);
+  background: var(--Color-Primary);
   border-radius: 25px;
 }

@@ -8,7 +8,7 @@ export const contactsData = [
     platform: "LinkedIn",
     icon: Linkedin,
     description:
-      "Conheça minha experiência, habilidades e recomendações. Conecte-se e acompanhe meus updates.",
+      "Conheça minha trajetória profissional, conexões e recomendações.",
     url: "https://www.linkedin.com/in/emersonssales/",
     label: "Conectar",
   },
@@ -17,7 +17,7 @@ export const contactsData = [
     platform: "E-mail",
     icon: Mail,
     description:
-      "Envie sua proposta, dúvida ou solicitação de orçamento. Resposta rápida garantida.",
+      "Envie sua proposta, dúvida ou solicitação. Resposta rápida garantida.",
     url: "mailto:salesdev245@gmail.com",
     label: "Enviar e-mail",
   },
@@ -26,7 +26,7 @@ export const contactsData = [
     platform: "GitHub",
     icon: Github,
     description:
-      "Explore meus repositórios, faça forks e veja meus projetos mais recentes. Vamos codar juntos!",
+      "Explore meus repositórios, códigos e projetos abertos mais recentes.",
     url: "https://github.com/saalesz",
     label: "Ver Projetos",
   },

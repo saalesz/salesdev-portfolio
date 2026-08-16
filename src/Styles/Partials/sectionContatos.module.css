@@ -1,191 +1,147 @@
 .Contatos {
   position: relative;
   width: 100%;
-  height: 1732px;
+  height: 1700px;
 
-  background: var(--Preto);
+  background: var(--Color-Bg-Dark);
 
   overflow: hidden;
+
+  border-top: 1px solid var(--Color-Dark-Gray);
 }
 
-.textContainer {
+.SectionTag {
+  position: absolute;
+  width: 150px;
+  height: 25px;
+  left: calc(50% - 150px/2 - 0.5px);
+  top: 80px;
+
+  font-family: var(--font-plus);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: var(--Color-Primary);
+}
+
+.Title {
+  position: absolute;
+  width: calc(100% - 16px);
+  height: auto;
+  left: calc(50% - (100% - 16px)/2);
+  top: 140px;
+
+  font-family: var(--font-bebas);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--fs-h0);
+  line-height: 64px;
+
+  leading-trim: both;
+  text-edge: cap;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--Color-White);
+
+  & span {
+    color: var(--Color-Primary);
+  }
+}
+
+.Description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
-  gap: 32px;
+  gap: 20px;
 
   position: absolute;
   width: calc(100% - 16px);
   height: auto;
   left: calc(50% - (100% - 16px) / 2);
-  top: 260px;
+  top: 360px;
 
-  & h1 {
-    width: 100%;
-    height: auto;
-
-    font-family: var(--font-poppins);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 47px;
-
-    leading-trim: both;
-    text-edge: cap;
-    align-items: center;
-    text-transform: uppercase;
-
-    color: var(--Branco);
-
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-
-    & span {
-      color: var(--Azul-Claro);
-    }
-  }
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 
   & p {
-    width: 100%;
-    height: auto;
-
     font-family: var(--font-poppins);
     font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
+    font-weight: 400;
+    font-size: var(--fs-body);
+    line-height: 28px;
+    text-align: center;
 
-    color: var(--Cinza-Claro);
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    color: var(--Color-Gray);
   }
 }
 
 .cardsContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 0px;
   gap: 40px;
 
   position: absolute;
-  width: 340px;
+  width: calc(100% - 16px);
   height: auto;
-  left: calc(50% - 340px / 2);
-  top: 679px;
+  left: calc(50% - (100% - 16px) / 2);
+  top: 578px;
+
 
   & .card {
-    width: 340px;
-    height: 293px;
+    width: 100%;
+    height: 285px;
 
-    background: linear-gradient(100.41deg, #0a0a0a 0%, #101010 100%);
-    border-radius: 32px 0px 32px 32px;
-
-    overflow: hidden;
+    background: var(--Color-Dark);
+    border-radius: 32px;
+    border: 1px solid var(--Color-Dark-Gray);
 
     flex: none;
     order: 0;
     flex-grow: 0;
 
-    & .iconContainer {
+    overflow: hidden;
+
+    & .iconContainer img {
       position: relative;
-      width: 105px;
-      height: 106px;
-      left: 235px;
-      top: 0px;
+      width: auto;
+      height: 100px;
+      left: 28px;
+      top: 28px;
 
-      overflow: hidden;
-
-      & .iconBg {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 22.3174px;
-        gap: 22.32px;
-
-        position: absolute;
-        width: 63px;
-        height: 63px;
-        left: 39px;
-        top: 4px;
-
-        z-index: 1;
-
-        background: radial-gradient(71.4% 51.16% at 50% 50%,
-            #f0ede6 0%,
-            #ddd7c9 100%);
-        border-radius: 50%;
-
-        & img {
-          width: 18.37px;
-          height: 18.37px;
-
-          flex: none;
-          order: 0;
-          flex-grow: 0;
-        }
-      }
-
-      & .subtract {
-        position: absolute;
-        width: 105px;
-        height: 106px;
-        right: 0px;
-        top: 0px;
-      }
+      mix-blend-mode: overlay;
+      opacity: 0.5;
     }
 
-    & .cardInfo {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0px;
-      gap: 52px;
-
+    & .cardDescription {
       position: relative;
-      width: 259px;
+      width: 80%;
       height: auto;
-      left: 29px;
-      top: -65px;
+      left: 28px;
+      top: 48px;
 
-      & img {
-        width: auto;
-        height: 93.5px;
+      font-family: var(--font-poppins);
+      font-style: normal;
+      font-weight: 400;
+      font-size: var(--fs-body);
+      line-height: 28px;
+      display: flex;
+      align-items: center;
 
-        mix-blend-mode: overlay;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-      }
-
-      & h1 {
-        width: 100%;
-        height: auto;
-
-        font-family: var(--font-poppins);
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-
-        color: var(--Cinza-Claro);
-
-        flex: none;
-        order: 1;
-        align-self: stretch;
-        flex-grow: 0;
-      }
+      color: var(--Color-White);
     }
+
   }
 }
 
@@ -195,76 +151,73 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .Contatos {
-    height: 1480px;
+    height: 1400px;
   }
 
-  .textContainer {
-    gap: 36px;
+  .Title {
+    width: calc(100% - 220px);
+    left: calc(50% - (100% - 220px)/2);
+    top: 140px;
 
-    width: calc(100% - 320px);
-    left: 72px;
-    top: 260px;
+    font-size: var(--fs-max);
+    line-height: 88px;
 
-    & h1 {
-      font-size: 42px;
-      line-height: 53px;
+  }
+
+  .Description {
+    width: calc(100% - 200px);
+    left: calc(50% - (100% - 200px) / 2);
+    top: 420px;
+
+    & p {
+      font-size: var(--fs-h4);
+      line-height: 32px;
     }
   }
 
   .cardsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    padding: 0px;
-    gap: 54px 44px;
-
-    position: relative;
-    width: 724px;
-    height: auto;
-
-    left: 72px;
-    top: 705px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(100% - 64px);
+    left: calc(50% - (100% - 64px) / 2);
+    top: 600px;
   }
 }
 
 /* DESKTOP / NOTEBOOK (≥1024px) */
 @media (min-width: 1280px) {
   .Contatos {
-    height: 1460px;
+    height: 1200px;
   }
 
-  .textContainer {
-    gap: 28px;
+  .Title {
+    width: calc(100% - 420px);
+    left: calc(50% - (100% - 420px)/2);
+    top: 140px;
 
-    width: calc(100% - 650px);
-    left: 95px;
-    top: 270px;
+    font-size: var(--fs-max);
+    line-height: 88px;
+  }
 
-    & h1 {
-      font-size: 52px;
-      line-height: 63px;
-    }
+  .Description {
+    width: calc(100% - 500px);
+    left: calc(50% - (100% - 500px) / 2);
+    top: 320px;
+
+    gap: 8px;
 
     & p {
-      width: 90%;
+      font-size: var(--fs-body);
+      line-height: 22px;
     }
   }
 
   .cardsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    padding: 0px;
-    gap: 54px 44px;
-
-    position: relative;
-    width: 724px;
-    height: auto;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(100% - 420px);
     left: 95px;
-    top: 705px;
+    top: 480px;
   }
 }
 
@@ -272,36 +225,51 @@
 
 @media (min-width: 1700px) {
   .Contatos {
-    height: 1240px;
+    height: 1200px;
   }
 
-  .textContainer {
-    gap: 28px;
+  .SectionTag {
+    top: 100px;
+  }
 
-    width: calc(100% - 970px);
-    left: 95px;
-    top: 300px;
+  .Title {
+    width: calc(100% - 800px);
+    left: calc(50% - (100% - 800px)/2);
+    top: 160px;
 
-    & h1 {
-      font-size: 76px;
-      line-height: 90px;
-    }
+    font-size: var(--fs-xxl);
+    line-height: 160px;
+  }
+
+  .Description {
+    width: calc(100% - 500px);
+    left: calc(50% - (100% - 500px) / 2);
+    top: 520px;
+
+    gap: 8px;
 
     & p {
-      width: 70%;
+      font-size: var(--fs-body);
+      line-height: 22px;
     }
   }
 
   .cardsContainer {
+    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 52px;
+    gap: 40px;
 
     position: absolute;
-    width: auto;
-    height: 293px;
-    left: 105px;
-    top: 751px;
+    width: calc(100% - 340px);
+    height: 285px;
+    left: calc(50% - (100% - 340px) / 2);
+    top: 680px;
+
+    & .card {
+      width: 480px;
+      height: 285px;
+    }
   }
 }

@@ -1,8 +1,7 @@
 import Home from "./Partials/sectionHome";
 import Projetos from "./Partials/sectionProjetos";
 import Sobre from "./Partials/sectionSobre";
-import Habilidades from "./Partials/sectionHabilidades";
-import Contatos from "./Partials/sectionConecte";
+import Contatos from "./Partials/sectionContato";
 import Footer from "../Components/Footer";
 
 import "../Styles/styles.css";
@@ -13,7 +12,6 @@ function Index() {
       <Home />
       <Projetos />
       <Sobre />
-      <Habilidades />
       <Contatos />
       <Footer />
     </>
