@@ -108,37 +108,85 @@
       }
     }
 
-    & .ViewProjects {
+    & .BtnsHome {
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 8px 20px;
-      gap: 16px;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 22px;
 
-      width: 176px;
+      width: 100%;
       height: 42px;
-
-      background: linear-gradient(93.25deg, #AC58EB 0%, #B26FE9 99.83%);
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
 
       flex: none;
       order: 1;
       flex-grow: 0;
 
-      font-family: var(--font-space);
-      font-style: normal;
-      font-weight: 500;
-      font-size: var(--fs-body);
-      line-height: 26px;
-      color: var(--Color-White);
+      & .ViewProjects {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        gap: 16px;
 
-      flex: none;
-      order: 0;
-      flex-grow: 0;
+        width: 176px;
+        height: 42px;
+
+        background: linear-gradient(93.25deg, #AC58EB 0%, #B26FE9 99.83%);
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+        font-family: var(--font-space);
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--fs-body);
+        line-height: 26px;
+        color: var(--Color-White);
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+
+      & .BaixarCV {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        gap: 16px;
+
+        width: 155px;
+        height: 42px;
+
+        background: transparent;
+        border-radius: 12px;
+        border: 0.5px solid var(--Color-Gray);
+        cursor: pointer;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+        font-family: var(--font-space);
+        font-style: normal;
+        font-weight: 500;
+        font-size: var(--fs-body);
+        line-height: 26px;
+        color: var(--Color-Gray);
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+      }
     }
+
   }
 }
 

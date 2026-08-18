@@ -18,7 +18,7 @@ export const contactsData = [
     icon: Mail,
     description:
       "Envie sua proposta, dúvida ou solicitação. Resposta rápida garantida.",
-    url: "mailto:salesdev245@gmail.com",
+    url: "mailto:contatosalesdev@gmail.com",
     label: "Enviar e-mail",
   },
   {

@@ -1,3 +1,12 @@
 @import './Fonts.css';
 @import './Normalize.css';
 @import './Variables.css';
+
+
+body {
+  cursor: none; /* Esconde o cursor padrão da seta */
+}
+
+a, button {
+  cursor: none; /* Garante que links e botões também não mostrem a mãozinha padrão */
+}

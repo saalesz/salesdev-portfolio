@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 import styles from "../../Styles/Partials/sectionHome.module.css";
 import Header from "../../Components/Header";
 
 import Arrow from "../../Assets/Icons/svgs/Arrow.svg";
+import ArrowCV from "../../Assets/Icons/svgs/ArrowCV.svg";
 
 // 1. Alterado para o abecedário completo em maiúsculas
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -37,7 +39,7 @@ function Home() {
 
         iteration += 1 / 3; // Mantém a velocidade da transição
       }, 30); // Velocidade da troca de letras (ms)
-    }, 400); 
+    }, 400);
 
     return () => {
       clearInterval(interval);
@@ -63,20 +65,19 @@ function Home() {
     },
   };
 
-  const blurVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 0.6, 
-      scale: 1, 
-      transition: { duration: 1.2, ease: "easeOut" } 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
 
   return (
     <>
       <Header />
       <section className={styles.Home} id="home" aria-labelledby="hero-title">
-        <motion.div 
+        <motion.div
           className={styles.HomeContent}
           variants={containerVariants}
           initial="hidden"
@@ -85,26 +86,40 @@ function Home() {
           <motion.p variants={itemVariants}>
             - UI/UX DESIGNER & FRONT-END DEVELOPER
           </motion.p>
-          
+
           <div className={styles.HomeContentText}>
             <div className={styles.HomeContentTextTitle}>
               <motion.h1 variants={itemVariants} id="hero-title">
                 DESIGN DE <span className={styles.scrambleWord}>{displayText}</span>, ENGENHARIA <span>FRONT-END.</span>
               </motion.h1>
-              
+
               <motion.h2 variants={itemVariants}>
                 Olá, sou Emerson Sales. Transformo ideias complexas em aplicações web modernas, acessíveis e de alta performance, unindo design focado na experiência do usuário e código limpo.
               </motion.h2>
             </div>
-            
-            <motion.button 
-              className={styles.ViewProjects}
-              variants={itemVariants}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Ver projetos <img src={Arrow} alt="" />
-            </motion.button>
+
+            <div className={styles.BtnsHome}>
+              <motion.button
+                className={styles.ViewProjects}
+                variants={itemVariants}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => scrollToSection('projetos')}
+              >
+                Ver projetos <img src={Arrow} alt="" />
+              </motion.button>
+
+              <motion.a
+                href="/curriculo.pdf"
+                download="Curriculo_Emerson_Sales.pdf"
+                className={styles.BaixarCV}
+                variants={itemVariants}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Baixar CV <img src={ArrowCV} alt="" />
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </section>

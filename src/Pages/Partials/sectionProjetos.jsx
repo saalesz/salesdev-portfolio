@@ -38,16 +38,13 @@ function Projetos() {
   };
 
   return (
-    <section
-      className={styles.Projetos}
-      id="projetos"
-    >
+    <section className={styles.Projetos} id="projetos">
 
       {/* Controles do carrossel (Setas) */}
       <div className={styles.carouselActions}>
         <button
           onClick={() => handleScroll("left")}
-          className={styles.arrowBtn} 
+          className={styles.arrowBtn}
           aria-label="Projetos anteriores"
         >
           <img src={left} alt="Seta esquerda" />

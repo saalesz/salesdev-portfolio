@@ -68,16 +68,16 @@ function Header() {
   // Variantes de animação (só serão aplicadas se isMobile for true)
   const menuVariants = {
     closed: {
-      x: "-100%", 
+      x: "-100%",
       transition: { type: "tween", duration: 0.3 }
     },
     open: {
-      x: 0, 
-      transition: { 
-        type: "tween", 
-        duration: 0.3, 
-        staggerChildren: 0.05, 
-        delayChildren: 0.1 
+      x: 0,
+      transition: {
+        type: "tween",
+        duration: 0.3,
+        staggerChildren: 0.05,
+        delayChildren: 0.1
       }
     }
   };
@@ -85,6 +85,12 @@ function Header() {
   const itemVariants = {
     closed: { opacity: 0, x: -20 }, // Itens surgem ligeiramente da esquerda
     open: { opacity: 1, x: 0 }
+  };
+
+  const handleContact = () => {
+    const phone = "5511916336118";
+    const message = encodeURIComponent("Olá! Vi seu portfólio e gostaria de conversar.");
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
   };
 
   return (
@@ -127,18 +133,19 @@ function Header() {
                   <img src={Github} alt="GitHub" />
                 </div>
               </a>
-              <a href="https://www.instagram.com/sxlesz_" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/saalesz_" target="_blank" rel="noreferrer">
                 <div className={styles.IconRedes}>
                   <img src={Instagram} alt="Instagram" />
                 </div>
               </a>
             </div>
           </motion.div>
-          
+
           <motion.p className={styles.emailcontato} variants={isMobile ? itemVariants : {}}>
             contatosalesdev@gmail.com
           </motion.p>
-          <motion.button className={styles.btnContato} variants={isMobile ? itemVariants : {}}>
+          <motion.button className={styles.btnContato} variants={isMobile ? itemVariants : {}}
+            onClick={handleContact}>
             Fale comigo
           </motion.button>
         </motion.nav>
