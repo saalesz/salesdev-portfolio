@@ -1,8 +1,3 @@
-Aqui está uma sugestão de **`README.md`** completa, profissional e estruturada para o seu repositório. O conteúdo está alinhado com o seu portfólio **SalesDev** e com o seu perfil de Front-End & UI/UX Designer.
-
-Você pode colar o código abaixo diretamente no seu arquivo `README.md`:
-
-```markdown
 <div align="center">
 
   # 🚀 SalesDev — Portfólio Personalizado
@@ -107,6 +102,6 @@ yarn dev
 
 Desenvolvido por **Emerson Sales**. Vamos conversar sobre novos projetos e oportunidades!
 
-* **LinkedIn:** [linkedin.com/in/emerson-sales](https://www.linkedin.com/)
+* **LinkedIn:** [linkedin.com/in/emerson-sales](www.linkedin.com/in/emersonslz)
 * **Website:** [salesdevs.com.br](https://www.salesdevs.com.br/)
 * **GitHub:** [@saalesz](https://www.google.com/search?q=https://github.com/saalesz)
