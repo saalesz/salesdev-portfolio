@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+Aqui está uma sugestão de **`README.md`** completa, profissional e estruturada para o seu repositório. O conteúdo está alinhado com o seu portfólio **SalesDev** e com o seu perfil de Front-End & UI/UX Designer.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Você pode colar o código abaixo diretamente no seu arquivo `README.md`:
 
-## Available Scripts
+```markdown
+<div align="center">
 
-In the project directory, you can run:
+  # 🚀 SalesDev — Portfólio Personalizado
 
-### `npm start`
+  <p align="center">
+    <strong>Interface moderna, intuitiva e focada na melhor experiência do usuário (UX).</strong>
+  </p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <p align="center">
+    <a href="https://www.salesdevs.com.br/" target="_blank">
+      <img src="https://img.shields.io/badge/🌐_Acessar_Site-salesdevs.com.br-0070f3?style=for-the-badge" alt="Website" />
+    </a>
+  </p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  ---
+</div>
 
-### `npm test`
+## 📌 Sobre o Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O **SalesDev Portfolio** é a minha plataforma de apresentação profissional, desenvolvida para unir a precisão técnica do desenvolvimento Front-end com a sensibilidade estética do UI/UX Design. O objetivo principal do projeto é apresentar minhas habilidades, projetos em destaque (como *My Service* e *AlphaDev's*) e facilitar o contato profissional.
 
-### `npm run build`
+- 🔗 **Deploy Oficial:** [salesdevs.com.br](https://www.salesdevs.com.br/)
+- 🎯 **Foco Principal:** Responsividade, Acessibilidade, Performance e Design Moderno.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tecnologias e Ferramentas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto foi construído utilizando as seguintes tecnologias e práticas:
 
-### `npm run eject`
+- **Front-end:**
+  - `HTML5` semântico para melhor acessibilidade e SEO.
+  - `CSS3` avançado (Layouts Responsivos, Flexbox, CSS Grid e Animações).
+  - `JavaScript (ES6+)` para interatividade e dinamicidade.
+  - `React.js` para componentização escalável e alta performance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **UI/UX Design:**
+  - `Figma` para wireframing, design system e prototipagem de alta fidelidade.
+  - Metodologia *Mobile-First*.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Infraestrutura e Deploy:**
+  - `Git` & `GitHub` para versionamento de código.
+  - `Vercel` para hospedagem e integração contínua.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💼 Projetos em Destaque no Portfólio
 
-## Learn More
+| Projeto | Descrição |
+| :--- | :--- |
+| **My Service** | TCC focado em Front-End e UI/UX com foco em usabilidade e tecnologias web modernas. |
+| **AlphaDev's** | Aplicação desenvolvida para simulação empresarial, alinhando prática técnica ao mercado. |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎨 Principais Destaques do Layout
 
-### Code Splitting
+- ⚡ **Performance Elevada:** Carregamento otimizado de imagens e assets.
+- 📱 **Totalmente Responsivo:** Adaptação perfeita para desktop, tablets e smartphones.
+- ♿ **Acessibilidade Web:** Estruturação pensada para boa leitura por leitores de tela e navegação acessível.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 💻 Como Rodar o Projeto Localmente
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Caso queira clonar e executar este repositório em sua máquina:
 
-### Making a Progressive Web App
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/saalesz/salesdev-portfolio.git](https://github.com/saalesz/salesdev-portfolio.git)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
 
-### Advanced Configuration
+2. **Acesse o diretório do projeto:**
+```bash
+cd salesdev-portfolio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Instale as dependências:** *(se aplicável)*
+```bash
+npm install
+# ou
+yarn install
 
-### `npm run build` fails to minify
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **Execute o servidor de desenvolvimento:**
+```bash
+npm run dev
+# ou
+yarn dev
+
+```
+
+5. Abra `http://localhost:3000` no seu navegador para ver o resultado.
+
+---
+
+## 📬 Contato & Redes
+
+Desenvolvido por **Emerson Sales**. Vamos conversar sobre novos projetos e oportunidades!
+
+* **LinkedIn:** [linkedin.com/in/emerson-sales](https://www.linkedin.com/)
+* **Website:** [salesdevs.com.br](https://www.salesdevs.com.br/)
+* **GitHub:** [@saalesz](https://www.google.com/search?q=https://github.com/saalesz)
